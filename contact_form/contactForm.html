@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Form</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<style type="text/css">
+		body{
+         background-image: url('khan.jpg');
+  	     background-repeat: no-repeat;
+  	     background-size: cover;
+
+         }
+
+        #khan{
+     	margin: 5% 15%;
+     	background-color:orange;
+        opacity: 0.7;
+     	
+        }
+        #ar{
+    	margin: 25px;
+        }
+        input{
+    	margin-top: 5px;
+    	border-radius: 0 !important;
+        }
+        .input{
+        height: 50px;
+        }
+        h1,h4,h5{
+    	color: white !important;
+        }
+        textarea{
+        	resize: none;
+        }
+        hr{
+        	border: 2px solid white;
+        }
+	</style>
+
+</head>
+<body>
+<div id="khan">
+<div class="row">
+
+ <div class="col-sm-6" style="margin-top: 30px;">
+  <h1 style="padding-left: 25px;"><u><b>CONTACT FORM</b></u></h1>
+
+   <form action="#">
+    <div class="form-group" id="ar">
+ 
+     <input type="text" name="firstName" placeholder="First Name*" class="form-control input" required="required">
+ 
+     <input type="text" name="lastName" placeholder="Last Name*" class="form-control input" required="required">
+ 
+     <input type="email" name="email" placeholder="Email*" class="form-control input" required="required">
+
+     <input type="text" name="phone" placeholder="Phone*" class="form-control input" required="required">
+
+     <input type="text" name="companyName" placeholder="Company Name" class="form-control input">
+
+     <input type="text" name="webUrl" placeholder="Website URL" class="form-control input">
+
+     <textarea name="comment" placeholder="How can we help you?*" style="height: 150px; margin-top: 5px;" class="form-control" required="required"></textarea>
+
+     <button name="submit" style="margin-top: 5px; height: 50px; border: 5px solid #fff; background-color: transparent; color: white !important;" class="btn btn-default btn-block">SUBMIT</button>
+
+    </div>
+   </form>
+ </div>
+
+
+ <div class="col-sm-5 col-sm-offset-1" style="margin-top: 30px;">
+   <h1 style="padding-left: 20px;"><u><b>CONTACT US</b></u></h1>
+   <div class="form-group" id="ar">
+   <h4><b>E-MAIL:</b></h4>
+   <h5>info@gaintechs.com</h5>
+   <br><br>
+
+   <h4>PHONE:</h4>
+   <h5>+92 336 9526 104</h5>
+   <br><br>
+
+   <address>
+ 	  <h4>ADDRESS:</h4>
+ 	  <h5>
+ 		Rehman plaza saddar road,<br>
+ 		Peshawar Cantt-<br>
+ 		Pakistan.Flat No: 1080
+ 	  </h5>
+   </address>
+
+   <hr>
+
+   <div id="googleMap" style="height:200px;width:100%; background-color: white;"></div>
+
+   <script src="http://maps.googleapis.com/maps/api/js"></script>
+   <script>
+   var myCenter = new google.maps.LatLng(34.00837, 71.58010);
+
+   function initialize() {
+   var mapProp = {
+   center:myCenter,
+   zoom:12,
+   scrollwheel:false,
+   draggable:false,
+   mapTypeId:google.maps.MapTypeId.ROADMAP
+   };
+
+   var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+   var marker = new google.maps.Marker({
+   position:myCenter,
+   });
+
+   marker.setMap(map);
+   }
+
+   google.maps.event.addDomListener(window, 'load', initialize);
+   </script>
+
+
+ 	</div>
+ </div>
+</div>
+</div>
+
+</body>
+</html>
